@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}  
+    <div class="container" id="articles-container">
+ 
+  {% autoescape off %}
+		<div class="card mb-3 box">
+		<div class="col-md-12">
+				   <h4>Detect the fake profiles in online social networks using Neural Net</h4> 
+				     <p class="card-text"><strong>Execution Start time:</strong>: {{starttime}}</p> 
+					 <h5>training datasets.......</h5>
+				    <p class="card-text"><strong>Classification Accuracy on Test dataset</strong>: {{accuracy}}</p> 
+					  <p class="card-text"><strong>Network in the XML file</strong>:<a href="#" data-toggle="modal" data-target="#mymodal">Network</a></p> 
+					 <p class="card-text"><strong>Percent Error on Test dataset</strong>: {{pererror}}</p> 
+					 <p class="card-text"><strong>Confusion matrix, without normalization</strong>: {{cm}}</p> 
+					 <p class="card-text"><strong>Confusion matrix, with normalization</strong>: {{cmnormal}}</p> 
+					  <p class="card-text"><strong>Classification report</strong>: {{clrep}}</p> 
+					  <p class="card-text"><strong>Area Under the Receiver Operating Characteristic Curve</strong>: {{roc_auc_score}}</p> 
+					   <p class="card-text"><strong>False Positive rate</strong>: {{falseprate}}</p> 
+					    <p class="card-text"><strong>True Positive rate</strong>: {{trueprate}}</p> 
+					  <p class="card-text"><strong>Execution End time:</strong>: {{endtime}}</p> 
+				   <img src="/static/confusion_matrix_nn.png"  style="width: auto;margin: 10px;">
+		</div>
+		</div> 
+			{% endautoescape %}
+<div id="mymodal" class="modal fade" aria-labelledby="my-modalLabel" aria-hidden="true" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" data-dismiss="modal">
+            <div class="modal-content"  >              
+			  <div class="modal-header">
+        <h5 class="modal-title">Network</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+                <div class="modal-body" style="overflow:scroll;">
+				<textarea  style="border:none;width:100%;height:100vh;" readonly>
+                    {{networkxml}}
+                    </textarea>
+                </div> 
+            </div>
+        </div>
+    </div>   
+   </div> 
+ {% endblock %}
+ {% block jsscript %}  
+ {% endblock %} 

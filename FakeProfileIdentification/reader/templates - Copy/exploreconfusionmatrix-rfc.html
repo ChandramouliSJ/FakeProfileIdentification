@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}  
+    <div class="container" id="articles-container">
+ 
+  {% autoescape off %}
+		<div class="card mb-3 box">
+		<div class="col-md-12">
+				   <h4>Detect the fake profiles in online social networks using Randaom Forest</h4> 
+				     <p class="card-text"><strong>Execution Start time:</strong>: {{starttime}}</p> 
+					 <h5>training datasets.......</h5>
+					 <p class="card-text"><strong>The best classifier is</strong>: {{bestclassifier}}</p>  
+					 <p class="card-text"><strong>Score</strong>: {{scores}}</p>  
+					 <p class="card-text"><strong>Estimated score</strong>: {{estimatedscore}}</p>  
+				    <p class="card-text"><strong>Classification Accuracy on Test dataset</strong>: {{accuracy}}</p>  
+					 <p class="card-text"><strong>Confusion matrix, without normalization</strong>: {{cm}}</p> 
+					 <p class="card-text"><strong>Confusion matrix, with normalization</strong>: {{cmnormal}}</p> 
+					  <p class="card-text"><strong>Classification report</strong>: {{clrep}}</p>  
+					   <p class="card-text"><strong>False Positive rate</strong>: {{falseprate}}</p> 
+					    <p class="card-text"><strong>True Positive rate</strong>: {{trueprate}}</p> 
+					  <p class="card-text"><strong>Execution End time:</strong>: {{endtime}}</p> 
+				  
+				   <img src="/static/confusion_matrix_rfc_tain.png"  style="width: auto;margin: 10px;">
+				     <img src="/static/confusion_matrix_rfc_roc.png"  style="width: auto;margin: 10px;">
+		</div>
+		</div> 
+			{% endautoescape %}
+    </div> 
+ {% endblock %}
+ {% block jsscript %}  
+ {% endblock %} 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fake Profile Identification in Social Network Using Machine Learning</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/popper.min.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <style>
+  .card-body.FAKE::after{
+    content:" ";
+  } 
+  </style>
+</head>
+<body>
+<div class="row m-0"> 
+                <div class="col-md-3"> 
+        {% include 'sidebar.html' %}
+    </div>
+	 <div class="col-md-9"> 
+	  <h3>Fake Profile Identification in Social Network Using Machine Learning</h3>
+     {% block content %}
+      {% endblock %} 
+	  </div> 
+</div>
+     {% block jsscript %} 
+{% endblock %}
+<style>
+    .sidebar{
+        position: static;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    .sidebar a{
+width: 100%;
+    display: block;
+    margin: 24px 0px;
+    padding: 10px 5px;
+    font-weight: bolder;
+    font-size: large;
+    text-decoration: none;
+    background-color: #26bbbb;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 0.5px 1px grey;
+    text-align: center;
+    color: #fff;
+    }
+	.sidebar ul{
+	 list-style:none;
+	}
+	 
+ table.dataframe {
+	margin: auto;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #fff; /*for older IE*/
+	border-style: hidden;
+}
+
+ 
+
+table.dataframe thead th {
+	padding: 8px;
+	background-color: #fde9d9;
+	font-size: large;
+} 
+
+table.dataframe th, table.dataframe td {
+	padding: 3px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #f79646 #ccc;
+}
+
+table.dataframe td {
+	text-align: right;
+}
+
+table.dataframe tbody th {
+	text-align: left;
+	font-weight: normal;
+}
+
+table.dataframe tfoot {
+	font-weight: bold;
+	font-size: large;
+	background-color: #687886;
+	color: #fff;
+}
+
+ 
+</style>
+</body>
+</html>

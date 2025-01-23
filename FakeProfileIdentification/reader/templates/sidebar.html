@@ -1,0 +1,17 @@
+<div class="sidebar">
+    <a href="{% url 'Home' %}">Home</a>  
+    <a href="/reuploadfile">Reupload Dataset</a>	
+	<a href="#">Explore</a>  
+	<ul>
+	  <li><a href="/explore-count">Extracted Features</a></li> 
+	  <li><a href="#">Confusion matrix</a>
+	  <ul> 
+	   <li><a href="/explore-confusion-matrix/nn">Neural Network</a></li> 
+		 <li><a href="/explore-confusion-matrix/rfc">Random Forest Classifier</a></li>
+		  <li><a href="/explore-confusion-matrix/svm">Support Vector Machine</a></li>
+		  
+	  </ul>
+	  </li>
+    </ul>
+ <a href="/profilecheck">Profile Check</a>		
+</div> 
